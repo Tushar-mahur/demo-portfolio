@@ -23,8 +23,9 @@
         --shadow-violet: rgba(155,169,255,0.4);
         }
         body { font-family: 'Arial', sans-serif; scroll-behavior: smooth;
-      background: linear-gradient(180deg, var(--dark-bg), var(--violet-1)); color: var(--text-dark); }
-        .navbar { box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: all 0.3s; }
+      background: linear-gradient(180deg, var(--dark-bg), var(--violet-1)); color: var(--text-dark);   padding-top: 76px; } /* Fixed navbar space */
+
+        .navbar { box-shadow: 0 2px 10px rgba(0,0,0,0.1); transition: all 0.3s; position: fixed !important; top: 0; width: 100%; z-index: 9999; }
         .hero { 
             min-height: 100vh; 
             background: linear-gradient(135deg, 
@@ -208,6 +209,44 @@
     .card { margin-bottom: 1.5rem; }
     /* Naye additions upar wale */
 }
+/* Hero Mobile Full Fix */
+@media (max-width: 576px) {
+    .hero {
+        padding-top: 80px !important; /* Navbar fixed ke liye space */
+        min-height: 100vh;
+    }
+    .hero .container {
+        padding: 0 15px !important;
+    }
+    .hero h1 {
+        font-size: 1.6rem !important;
+        margin-bottom: 1rem !important;
+    }
+    .hero .lead {
+        font-size: 1rem !important;
+    }
+    .btn-lg {
+        display: block !important;
+        width: 100% !important;
+        margin: 0.5rem 0 !important;
+        padding: 0.6rem !important;
+    }
+    .cloud-stack-hero {
+        min-height: 250px !important;
+        margin-top: 1rem;
+    }
+    /* Navbar fixed */
+    body {
+        padding-top: 76px; /* Navbar height */
+    }
+}
+
+/* Extra Small Phones */
+@media (max-width: 400px) {
+    .hero h1 { font-size: 1.4rem !important; }
+    .cloud-stack-hero i { font-size: 40px !important; }
+}
+
 
 
 </style>
